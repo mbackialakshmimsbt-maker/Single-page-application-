@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005fa3;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #004a80;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+      animation: fade 0.3s ease;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Single Page Application</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('about')">About</a>
+    <a href="#" onclick="navigate('contact')">Contact</a>
+  </nav>
+
+  <div id="content" class="container"></div>
+
+  <script>
+    // Define page content
+    const pages = {
+      home: `
+        <h2>Welcome to Home Page</h2>
+        <p>This is the main page of our single page application.</p>
+      `,
+      about: `
+        <h2>About Us</h2>
+        <p>We are a team building simple web apps using HTML, CSS, and JavaScript.</p>
+      `,
+      contact: `
+        <h2>Contact Us</h2>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 9876543210</p>
+      `
+    };
+
+    // Function to change page content
+    function navigate(page) {
+      document.getElementById('content').innerHTML = pages[page];
+      window.history.pushState({ page }, "", `#${page}`);
+    }
+
+    // Load correct page on refresh
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      navigate(hash);
+    });
+
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', (event) => {
+      const page = event.state?.page || 'home';
+      document.getElementById('content').innerHTML = pages[page];
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005fa3;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #004a80;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+      animation: fade 0.3s ease;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Single Page Application</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('about')">About</a>
+    <a href="#" onclick="navigate('contact')">Contact</a>
+  </nav>
+
+  <div id="content" class="container"></div>
+
+  <script>
+    // Define page content
+    const pages = {
+      home: `
+        <h2>Welcome to Home Page</h2>
+        <p>This is the main page of our single page application.</p>
+      `,
+      about: `
+        <h2>About Us</h2>
+        <p>We are a team building simple web apps using HTML, CSS, and JavaScript.</p>
+      `,
+      contact: `
+        <h2>Contact Us</h2>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 9876543210</p>
+      `
+    };
+
+    // Function to change page content
+    function navigate(page) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005fa3;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #004a80;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+      animation: fade 0.3s ease;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Single Page Application</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('about')">About</a>
+    <a href="#" onclick="navigate('contact')">Contact</a>
+  </nav>
+
+  <div id="content" class="container"></div>
+
+  <script>
+    // Define page content
+    const pages = {
+      home: `
+        <h2>Welcome to Home Page</h2>
+        <p>This is the main page of our single page application.</p>
+      `,
+      about: `
+        <h2>About Us</h2>
+        <p>We are a team building simple web apps using HTML, CSS, and JavaScript.</p>
+      `,
+      contact: `
+        <h2>Contact Us</h2>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 9876543210</p>
+      `
+    };
+
+    // Function to change page content
+    function navigate(page) {
+      document.getElementById('content').innerHTML = pages[page];
+      window.history.pushState({ page }, "", `#${page}`);
+    }
+
+    // Load correct page on refresh
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      navigate(hash);
+    });
+
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', (event) => {
+      const page = event.state?.page || 'home';
+      document.getElementById('content').innerHTML = pages[page];
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #005fa3;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #004a80;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+      animation: fade 0.3s ease;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Single Page Application</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="navigate('home')">Home</a>
+    <a href="#" onclick="navigate('about')">About</a>
+    <a href="#" onclick="navigate('contact')">Contact</a>
+  </nav>
+
+  <div id="content" class="container"></div>
+
+  <script>
+    // Define page content
+    const pages = {
+      home: `
+        <h2>Welcome to Home Page</h2>
+        <p>This is the main page of our single page application.</p>
+      `,
+      about: `
+        <h2>About Us</h2>
+        <p>We are a team building simple web apps using HTML, CSS, and JavaScript.</p>
+      `,
+      contact: `
+        <h2>Contact Us</h2>
+        <p>Email: example@email.com</p>
+        <p>Phone: +91 9876543210</p>
+      `
+    };
+
+    // Function to change page content
+    function navigate(page) {
+      document.getElementById('content').innerHTML = pages[page];
+      window.history.pushState({ page }, "", `#${page}`);
+    }
+
+    // Load correct page on refresh
+    window.addEventListener('load', () => {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      navigate(hash);
+    });
+
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', (event) => {
+      const page = event.state?.page || 'home';
+      document.getElementById('content').innerHTML = pages[page];
+    });
+  </script>
+</body>
+</html>
